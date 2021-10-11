@@ -6,5 +6,3 @@ js/private/*
 !js/private/.gitkeep
 js/vendor/*
 !js/vendor/.gitkeep
-
-mk

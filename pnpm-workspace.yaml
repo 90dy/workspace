@@ -1,0 +1,5 @@
+packages:
+	- js/internal/*
+	- js/public/*
+	- js/private/*
+	- js/vendor/*

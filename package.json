@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "version": "0.0.0-development",
+  "author": {
+    "name": "Acid Technologies",
+    "email": "staff@acid.team",
+    "url": "https://acid.tech"
+  },
+  "homepage": "https://github.com/acidteam/workspace#readme",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/acidteam/workspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acidteam/workspace/issues"
+  },
+  "scripts": {
+    "release": "semantic-release",
+    "postinstall": "./scripts/postinstall"
+  },
+	"prettier": "@internal/prettier-config",
+  "release": {
+    "extends": "semantic-release-monorepo"
+  },
+	"dependencies": {
+		"@internal/babel-config": "workspace:*",
+		"@internal/eslint-config": "workspace:*",
+		"@internal/prettier-config": "workspace:*"
+	}
+}

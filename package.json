@@ -36,7 +36,8 @@
 		"release": "release-it",
 		"readme": "readme",
 		"build": "babel src --config-file ./.babelrc.js --ignore dist,node_modules,.*.js --extensions .ts,.tsx --source-maps inline --out-dir ./dist --copy-files",
-		"prerelease": "pnpm build"
+		"prerelease": "pnpm build",
+		"package:create": "make -f ./scripts/package.mk create"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.15.7",

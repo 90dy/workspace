@@ -5,10 +5,10 @@ mk:
 	git subtree add --squash -P mk mk master
 
 js/public/% js/private/%:
-	git clone git@github.com:acidteam/$*
+	git clone git@github.com:acidteam/$* $@
 
  js/vendor/%:
-	git clone git@github.com:$*
+	git clone git@github.com:$* $@
 
 .PHONY: all
 all: setup

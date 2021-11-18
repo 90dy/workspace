@@ -15,8 +15,7 @@
     "url": "https://github.com/acidteam/workspace/issues"
   },
   "scripts": {
-    "release": "semantic-release",
-    "postinstall": "./scripts/postinstall"
+    "release": "semantic-release"
   },
 	"prettier": "@internal/prettier-config",
   "release": {

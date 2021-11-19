@@ -1,29 +1,74 @@
 {
-  "private": true,
-  "version": "0.0.0-development",
-  "author": {
-    "name": "Acid Technologies",
-    "email": "staff@acid.team",
-    "url": "https://acid.tech"
-  },
-  "homepage": "https://github.com/acidteam/workspace#readme",
+	"$schema": "https://json.schemastore.org/package.json",
+	"private": true,
+	"name": "@acidtech/workspace",
+	"version": "0.0.0-development",
+	"author": {
+		"name": "90dy",
+		"email": "90dy@acid.tech"
+	},
+	"description": "",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/acidteam/workspace.git"
-  },
-  "bugs": {
-    "url": "https://github.com/acidteam/workspace/issues"
-  },
-  "scripts": {
-    "release": "semantic-release"
-  },
-	"prettier": "@internal/prettier-config",
-  "release": {
-    "extends": "semantic-release-monorepo"
-  },
-	"dependencies": {
-		"@internal/babel-config": "workspace:*",
-		"@internal/eslint-config": "workspace:*",
-		"@internal/prettier-config": "workspace:*"
+		"type": "git",
+		"url": "git+https://acid.tech"
+	},
+	"homepage": "https://github.com/acidteam/workspace#readme",
+	"bugs": {
+		"url": "https://github.com/acidteam/workspace/issues"
+	},
+	"engines": {
+		"node": ">= 16.13.0 < 17.0.0"
+	},
+	"volta": {
+		"node": "16.13.0"
+	},
+	"jest": {
+		"passWithNoTests": true
+	},
+	"main": "dist/index.js",
+	"scripts": {
+		"prepare": "husky install",
+		"lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx,.json .",
+		"lint:fix": "pnpm run lint -- --fix",
+		"types:watch": "tsc --watch",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"release": "release-it",
+		"readme": "readme",
+		"build": "babel src --config-file ./.babelrc.js --ignore dist,node_modules,.*.js --extensions .ts,.tsx --source-maps inline --out-dir ./dist --copy-files",
+		"prerelease": "pnpm build"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@babel/eslint-parser": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
+		"@babel/preset-flow": "^7.14.5",
+		"@babel/preset-react": "^7.14.5",
+		"@babel/preset-typescript": "^7.15.0",
+		"@commitlint/cli": "^13.2.1",
+		"@commitlint/config-conventional": "^13.2.0",
+		"@types/jest": "^27.0.2",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"babel-jest": "^27.3.1",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-flowtype": "^6.1.1",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-security": "^1.4.0",
+		"eslint_d": "^11.0.0",
+		"flow-bin": "^0.162.1",
+		"husky": "^7.0.4",
+		"jest": "^27.3.1",
+		"lint-staged": "^11.2.4",
+		"prettier": "^2.4.1",
+		"pretty-quick": "^3.1.1",
+		"readme-md-generator": "^1.0.0",
+		"release-it": "^14.11.6",
+		"typescript": "^4.4.4"
 	}
 }

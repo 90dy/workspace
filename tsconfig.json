@@ -24,6 +24,6 @@
 		"tsBuildInfoFile": ".tsbuildinfo",
 		"noErrorTruncation": false
 	},
-	"exclude": ["node_modules", "./dist", "./**/*.js"],
+	"exclude": ["node_modules", "dist", "**/*.js", "proxy/*"],
 	"include": ["**/*.ts", "**/*.tsx"]
 }

@@ -1,5 +1,6 @@
 [pull]
 	rebase = true
+
 [branch "template/*"]
 	rebase = false
 

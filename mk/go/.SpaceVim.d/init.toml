@@ -1,8 +1,0 @@
-# go.mk
-
-[[layers]]
-  name = "lang#go"
-
-# [[layers]]
-#   name = "lsp"
-#   filetypes = ["go"]

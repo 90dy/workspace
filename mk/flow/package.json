@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "@babel/preset-flow": "^7.12.1",
-    "flow-bin": "^0.138.0"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
-    "typescript": "$TYPESCRIPT_VERSION"
-  }
-}

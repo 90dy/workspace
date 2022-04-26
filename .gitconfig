@@ -1,19 +1,2 @@
 [pull]
 	rebase = true
-
-[branch "template/*"]
-	rebase = false
-
-[remote "template/ecmascript"]
-	url = https://github.com/90dy/ecmascript-repository-template
-	fetch = +refs/heads/*:refs/remotes/*
-[branch "template/ecmascript/master"]
-	remote = template/ecmascript
-	merge = refs/heads/template/ecmascript/master
-
-[remote "template/ecmascript-package"]
-	url = https://github.com/90dy/ecmascript-package-template
-	fetch = +refs/heads/*:refs/remotes/*
-[branch "template/ecmascript-package/master"]
-	remote = template/ecmascript-package
-	merge = refs/heads/template/ecmascript-package/master

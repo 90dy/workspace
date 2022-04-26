@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
 	"private": true,
-	"name": "@acidtech/workspace",
+	"name": "acid.tech",
 	"version": "0.0.0-development",
 	"author": {
 		"name": "90dy",
@@ -25,17 +25,17 @@
 	"jest": {
 		"passWithNoTests": true
 	},
-	"main": "dist/index.js",
 	"scripts": {
 		"prepare": "husky install",
 		"lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx,.json .",
 		"lint:fix": "pnpm run lint -- --fix",
 		"types:watch": "tsc --watch",
-		"test": "jest",
+		"start": "nx serve",
+		"build": "nx build",
+		"test": "nx test",
 		"test:watch": "jest --watch",
 		"release": "release-it",
 		"readme": "readme",
-		"build": "babel src --config-file ./.babelrc.js --ignore dist,node_modules,.*.js --extensions .ts,.tsx --source-maps inline --out-dir ./dist --copy-files",
 		"prerelease": "pnpm build"
 	},
 	"devDependencies": {
@@ -48,6 +48,8 @@
 		"@babel/preset-typescript": "^7.15.0",
 		"@commitlint/cli": "^13.2.1",
 		"@commitlint/config-conventional": "^13.2.0",
+		"@nrwl/cli": "14.0.2",
+		"@nrwl/workspace": "14.0.2",
 		"@types/jest": "^27.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
 		"@typescript-eslint/parser": "^5.1.0",
@@ -65,10 +67,11 @@
 		"husky": "^7.0.4",
 		"jest": "^27.3.1",
 		"lint-staged": "^11.2.4",
-		"prettier": "^2.4.1",
+		"nx": "14.0.2",
+		"prettier": "^2.5.1",
 		"pretty-quick": "^3.1.1",
 		"readme-md-generator": "^1.0.0",
 		"release-it": "^14.11.6",
-		"typescript": "^4.4.4"
+		"typescript": "~4.6.2"
 	}
 }

@@ -6,7 +6,8 @@
 		"mikestead.dotenv",
 		"mgmcdermott.vscode-language-babel",
 		"orta.vscode-jest",
-		"flowtype.flow-for-vscode"
+		"flowtype.flow-for-vscode",
+		"nrwl.angular-console"
 	],
 	"unwantedRecommendations": []
 }

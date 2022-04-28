@@ -7,7 +7,8 @@
 		"mgmcdermott.vscode-language-babel",
 		"orta.vscode-jest",
 		"flowtype.flow-for-vscode",
-		"nrwl.angular-console"
+		"nrwl.angular-console",
+		"firsttris.vscode-jest-runner"
 	],
 	"unwantedRecommendations": []
 }

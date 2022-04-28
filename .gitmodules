@@ -1,0 +1,4 @@
+[submodule "libs/go-ssh"]
+	path = libs/go-ssh
+	url = https://github.com/90dy/go-ssh
+	branch = master

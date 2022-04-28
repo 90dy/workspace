@@ -1,5 +1,6 @@
 module.exports = {
 	root: true,
+	ignorePatterns: ['**/*'],
 	env: {
 		browser: true,
 		amd: true,
@@ -29,6 +30,7 @@ module.exports = {
 		'plugin:prettier/recommended',
 	],
 	plugins: [
+		'@nrwl/nx',
 		'security',
 		'import',
 		'react',
@@ -40,6 +42,34 @@ module.exports = {
 
 	overrides: [
 		{
+			files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+			rules: {
+				'@nrwl/nx/enforce-module-boundaries': [
+					'error',
+					{
+						enforceBuildableLibDependency: true,
+						allow: [],
+						depConstraints: [
+							{
+								sourceTag: '*',
+								onlyDependOnLibsWithTags: ['*'],
+							},
+						],
+					},
+				],
+			},
+		},
+		{
+			files: ['*.ts', '*.tsx'],
+			extends: ['plugin:@nrwl/nx/typescript'],
+			rules: {},
+		},
+		{
+			files: ['*.js', '*.jsx'],
+			extends: ['plugin:@nrwl/nx/javascript'],
+			rules: {},
+		},
+		{
 			files: ['*.{ts,tsx}'],
 			parser: '@typescript-eslint/parser',
 			rules: {
@@ -50,5 +80,4 @@ module.exports = {
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 	},
-	ignorePatterns: ['.*.js'],
 }

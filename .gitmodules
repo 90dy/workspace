@@ -2,3 +2,6 @@
 	path = libs/go-ssh
 	url = https://github.com/90dy/go-ssh
 	branch = master
+[submodule "apps/djo.bi"]
+	path = apps/djo.bi
+	url = https://github.com/acidteam/djo.bi
